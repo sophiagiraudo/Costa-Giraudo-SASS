@@ -1,0 +1,959 @@
+@font-face {
+    font-family: amalia;
+    src: url(Amalina.ttf);
+}
+@font-face {
+    font-family: kiona;
+    src: url(KionaR.ttf);
+}
+@font-face {
+    font-family: made;
+    src: url(MadeS.otf);
+}
+
+// variables fuentes
+$font1:'Khula', sans-serif;
+$font2: amalia;
+$font3: kiona;
+$font4: made;
+
+// variables paleta-colores
+$color1:#070707;
+$color2:#0b0b0bd9;
+$color3:#4d4d4d;
+$color4:#fffdf76f;
+$color5:#b6b6b6;
+$color6:#ffffffcf;
+$color7:#e6e6e6;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Khula', sans-serif;
+}
+/* ------------------------------GENERAL-------------------------- */
+body{
+    background-color: $color1;
+}
+a{
+    text-decoration: none;
+}
+.grid-container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0px;;
+    grid-auto-flow: row;
+    grid-template-areas: 
+        "grid-header"
+        "grid-main"
+        "grid-footer";
+}
+/*header*/
+.grid-header { 
+    grid-area:grid-header;
+}
+.bg-dark{
+    background-color: transparent!important;
+}
+.div-navnbar{
+    background-color: $color2;
+    .imgLogoMenu{
+        width: auto;
+        height: 70px;
+        object-fit: contain;
+        animation: fadeIn;
+        animation-duration: 2s; 
+    }
+}
+ul.navbar-nav li a.nav-link{
+    color: rgb(230, 230, 230) !important;
+    margin: 0 20px;
+    animation: fadeIn;
+    animation-duration: 2s; 
+    font-size: 21px;
+    font-weight: 100;
+    font-family:$font3;
+}
+ul.navbar-nav li a.nav-link:hover{
+    color: rgb(0, 0, 0) !important;
+}
+.navbar-toggler{
+    position: relative;
+    right: 15px;
+}
+.divLogoEnc{
+    padding-top: 400px;
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+.imgLogoEncabezado{
+    width: 600px;
+    height: 70px;
+    opacity: 0.9;
+    object-fit: cover;
+}
+/*footer*/
+.grid-footer{
+    grid-area:grid-footer;
+}
+.footerCosta{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    animation: fadeIn;
+    animation-duration: 6s;
+
+    .logoPie{
+        width: 400px;
+    }
+    .mapa{
+        width: 500px;
+    }
+    .iconsStyle{
+        height: 40%;
+        width: 100%;
+        color: $color5;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 15px;
+        padding: 5px 0; 
+        border-bottom: 1px solid $color3;
+        border-top: 1px solid $color3;
+    }
+    .paragraphFooter{
+        font-size: 20px;
+        margin-top: 2%;
+        font-family: $font3;
+    }
+    .fa-brands{
+        margin-left: 2%;
+    }
+}
+
+/* ------------------------------INDEX-------------------------- */
+/* headerIndex */
+.backHeaderIndex{
+    height: 100vh;
+    background-image: url(img/bannerindex.JPG);
+    background-size: cover;
+    background-position: center;
+}
+/* mainIndex */
+.h2index{
+    text-align: center;
+    font-family: $font4;
+    color: $color1;
+    font-weight: bold;
+    font-size: 40px;
+    background-color: #0000007f;
+    position: relative;
+    top: 30px;
+}
+.sectionNosotros{
+    padding: 100px;
+    background:url(img/Nosotros.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    display: flex;
+    align-content: space-between;
+}
+.boxNosotros{
+    position: relative;
+    height: 400px;
+    max-width: 600px;
+    padding: 20px 50px;
+    background: #fffdf76f;
+    box-shadow: 0 5px 15px #00000080;
+    animation: fadeInUp;
+    animation-duration: 2s;
+    overflow: hidden;
+    .headingNosotros{
+        margin: 0 0 20px;
+        padding: 0;
+        font-family: $font2;
+        font-weight: bold;
+        font-size: 48px;
+        color: #000000e9;
+    }
+    .paragraphfoNosotros{
+        margin: 0;
+        padding: 0;
+        font-family: $font1;
+        font-weight: bold;
+        font-size: 20px;
+        font-style: italic;
+    }
+}
+.phStudio { 
+    background-color: $color6;
+    background-image: url(img/Studio.JPG);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+.textStudio h4{
+    margin: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 100;
+    font-family:$font3;
+}
+.textStudio { 
+    font-size: 35px;
+    padding: 30px;
+    align-self: center;
+    animation: fadeInUp;
+    animation-duration: 3s;
+    border-bottom: 1px solid $color3;
+    border-top: 1px solid $color3;
+    font-weight: 100;
+    font-family:$font3;
+}
+.textLab { 
+    font-size: 30px;
+    padding: 30px; 
+    align-self: center;
+    animation: fadeInUp;
+    animation-duration: 4s;
+    border-bottom: 1px solid $color3;
+    border-top: 1px solid $color3;
+}
+.textLab h4 {
+    margin: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 10
+}
+.phLab { 
+    grid-area: grid-phLab;  
+    background-color: $color6;
+    background-image: url(img/bannerLaboratorio.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+h4 a{
+    color: rgb(255, 255, 255);
+}
+h4 a:hover{
+    color: $color3;
+}
+
+/* ------------------------------SERVICIOS-------------------------- */
+/* headerServicios */
+.backHeaderServicios{
+    height: 100vh;
+    background-image: url(img/bannerServicios.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+/* mainServicios */
+.grid-mainServicios { 
+    background-color: rgba(135, 135, 135, 0.849); 
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    grid-auto-flow: row;
+    align-items: center;
+    grid-template-areas:
+        "odontoEst phOdontoEst"
+        "phDiagnostico diagnostico"
+        "odontoGen phOdontoGen"
+        "phCirugia cirugia"
+        "medicinaEst phMedicinaEst"
+        "phTecnologia tecnologia";
+}
+.grid-mainServicios h4{
+    font-size: 30px;
+    animation: fadeInUp;
+    animation-duration: 3s;
+}
+.grid-mainServicios p{
+    font-size: 20px;
+    font-weight: bold;
+    animation: fadeInUp;
+    animation-duration: 3s;
+}
+.diagnostico { 
+    grid-area: diagnostico; 
+    padding: 0 10px;
+    font-size: 15px;
+}
+.phDiagnostico { 
+    grid-area: phDiagnostico; 
+    background-color: rgba(255, 255, 255, 0.813);
+    background-image: url(img/diagnostico.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+.phOdontoEst { 
+    grid-area: phOdontoEst;
+    background-color: rgba(255, 255, 255, 0.813);
+    background-image: url(img/odontoEst.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+}
+.odontoEst { 
+    grid-area: odontoEst;
+    padding: 0 10px; 
+    font-size: 15px; 
+}
+.odontoGen { 
+    grid-area: odontoGen;
+    padding: 0 10px; 
+    font-size: 15px; 
+}
+.phOdontoGen { 
+    grid-area: phOdontoGen; 
+    background-color: rgba(255, 255, 255, 0.813);
+    background-image: url(img/odontoGen.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+}
+.phCirugia { 
+    grid-area: phCirugia; 
+    background-color: rgba(255, 255, 255, 0.813);
+    background-image: url(img/cirugiaDental.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+}
+.cirugia { 
+    grid-area: cirugia; 
+    padding: 0 10px; 
+    font-size: 15px;
+}
+.medicinaEst { 
+    grid-area: medicinaEst; 
+    padding: 0 10px; 
+    font-size: 15px;
+}
+.phMedicinaEst { 
+    grid-area: phMedicinaEst;
+    background-color: rgba(255, 255, 255, 0.813);
+    background-image: url(img/medicinaEst.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+}
+.phTecnologia { 
+    grid-area: phTecnologia; 
+    background-color: rgba(255, 255, 255, 0.813);
+    background-image: url(img/tecnologia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+}
+.tecnologia { 
+    grid-area: tecnologia; 
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+/* ------------------------------LABORATORIO-------------------------- */
+/* headerLaboratorio */
+.backHeaderLaboratorio{
+    height: 100vh;
+    background-image: url(img/bannerLaboratorio.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* mainLaboratorio */
+.grid-mainLaboratorio {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "mockup-grid"
+        "ceramica-grid"
+        "sinMetales-grid"
+        "digitalSmail-grid"
+        "protesis-grid"
+        "fotografia-grid";
+}
+.grid-mainLaboratorio h4{
+    text-align: center;
+    font-size: 30px;
+    background-color:rgb(77, 77, 77);;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+.mockup-grid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text-mockup text-mockup"
+        "ph1mock ph2mock";
+    grid-area: mockup-grid;
+    animation: fadeInRight;
+    animation-duration: 2s;
+}
+.text-mockup { 
+    grid-area: text-mockup; 
+    /* background-color: pink; */
+}
+.ph1mock { 
+    grid-area: ph1mock; 
+    background-color: blueviolet;
+    background-image: url(img/mockup1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+.ph2mock { 
+    grid-area: ph2mock; 
+    background-color: rgb(209, 117, 150);
+    background-image: url(img/mockup2.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+.ceramica-grid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text-ceramica text-ceramica text-ceramica"
+        "ph1ceram ph2ceram ph2ceram"
+        "ph1ceram ph3ceram ph3ceram";
+    grid-area: ceramica-grid;
+    animation: fadeInLeft;
+    animation-duration: 3s;
+}
+.text-ceramica { 
+    grid-area: text-ceramica;
+    /* background-color: greenyellow; */
+}
+.ph1ceram { 
+    grid-area: ph1ceram;
+    background-color: rgb(143, 168, 106);
+    background-image: url(img/ceram1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+.ph2ceram { 
+    grid-area: ph2ceram;
+    background-color: rgb(87, 96, 74);
+    background-image: url(img/ceram2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.ph3ceram { 
+    grid-area: ph3ceram;
+    background-color: rgb(50, 73, 14);
+    background-image: url(img/ceram3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.sinMetales-grid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text-sinMetales text-sinMetales"
+        "ph1sinMet ph2sinMet";
+    grid-area: sinMetales-grid;
+    animation: fadeInRight;
+    animation-duration: 4s;
+}
+.text-sinMetales { 
+    grid-area: text-sinMetales; 
+    /* background-color: blue; */
+}
+.ph1sinMet { 
+    grid-area: ph1sinMet; 
+    background-color: rgb(174, 174, 213);
+    background-image: url(img/sinmetal1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.ph2sinMet { 
+    grid-area: ph2sinMet; 
+    background-color: rgb(38, 38, 46);
+    background-image: url(img/sinmetal2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.digitalSmail-grid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text-digitalSmile text-digitalSmile text-digitalSmile"
+        "ph1digital ph1digital ph3digital"
+        "ph2digital ph2digital ph3digital";
+    grid-area: digitalSmail-grid;
+    animation: fadeInLeft;
+    animation-duration: 5s;
+}
+.text-digitalSmile { 
+    grid-area: text-digitalSmile; 
+    /* background-color: red; */
+}
+.ph1digital { 
+    grid-area: ph1digital; 
+    background-color: rgb(120, 64, 64);
+    background-image: url(img/digitalsmile1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.ph2digital { 
+    grid-area: ph2digital; 
+    background-color: rgb(75, 54, 54);
+    background-image: url(img/digitalsmile2.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.ph3digital { 
+    grid-area: ph3digital; 
+    background-color: rgb(32, 3, 3);
+    background-image: url(img/digitalsmile3.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+.protesis-grid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text-protesis text-protesis"
+        "ph1prot ph2prot";
+    grid-area: protesis-grid;
+    animation: fadeInRight;
+    animation-duration: 6s;
+}
+.text-protesis { 
+    grid-area: text-protesis; 
+    /* background-color: violet; */
+}
+.ph1prot { 
+    grid-area: ph1prot; 
+    background-color: rgb(131, 72, 131);
+    background-image: url(img/protesis.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.ph2prot { 
+    grid-area: ph2prot; 
+    background-color: rgb(255, 6, 255);
+    background-image: url(img/protesis1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.fotografia-grid {  
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr 0.8fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text-fotografia text-fotografia text-fotografia"
+        "ph1foto ph2foto ph4foto"
+        "ph1foto ph2foto ph4foto"
+        "ph1foto ph3foto ph4foto"
+        "ph1foto ph3foto ph4foto";
+    grid-area: fotografia-grid;
+    animation: fadeInLeft;
+    animation-duration: 7s;
+}
+.text-fotografia { 
+    grid-area: text-fotografia;
+    /* background-color: goldenrod; */
+}
+.ph1foto { 
+    grid-area: ph1foto;
+    background-color: rgb(211, 194, 153);
+    background-image: url(img/foto2.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+.ph2foto { 
+    grid-area: ph2foto;
+    background-color: rgb(100, 82, 38);
+    background-image: url(img/foto3.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    height: 200px;
+
+}
+.ph3foto { 
+    grid-area: ph3foto;
+    background-color: rgb(76, 68, 49);
+    background-image: url(img/medicinaEst.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+
+}
+.ph4foto { 
+    grid-area: ph4foto;
+    background-color: rgb(247, 230, 187);
+    background-image: url(img/foto1.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* ------------------------------CONTACTO-------------------------- */
+/* headerContacto */
+.backHeaderContacto{
+    height: 18vh;
+    background-image: url(img/contacto.jpeg);
+    background-size: cover;
+    background-position:bottom;
+}
+/* mainContacto */
+.grid-mainContacto{
+    color: black;
+    background-image: url(img/contacto.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+}
+.formContacto{
+    font-size: 30px;
+    width: 600px;
+    color: white;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.648);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.tituloContacto{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: none;
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+textarea{
+    min-height: 100px;
+    min-width: 200px;
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+#boton{
+    background-color: rgb(26, 26, 26);
+    color: white;
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+#boton:hover{
+    color: rgb(0, 0, 0);
+}
+/* ------------------------------TRABAJOS-------------------------- */
+/* headerTrabajos */
+.backHeaderTrabajos{
+    width: 100vw;
+    position: fixed;
+    z-index: 99;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
+.sec{
+    width: 100%;
+}
+.carousel-indicators li{
+    height: 2px;
+    width: 20px;
+}
+.carousel-control-prev-icon{
+    padding: 10px;
+}
+.card{
+    margin: 20px 0;
+    animation: fadeInUp;
+    animation-duration: 3s;
+}
+.card-img{
+    height: 400px;
+    filter: brightness(60%);
+}
+/* ------------------------------MEDIA QUERIES-------------------------- */
+@media (max-width: 768px) { 
+    /* servicios */
+    .backHeaderServicios{
+        height: 60vh;
+        background-image: url(img/bannerServicios.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    .grid-mainServicios { 
+        background-color: rgba(135, 135, 135, 0.849); 
+        margin: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0;
+        grid-auto-flow: row;
+        align-items: center;
+        grid-template-areas:
+            "odontoEst"
+            "phOdontoEst" 
+            "diagnostico"
+            "phDiagnostico"
+            "odontoGen" 
+            "phOdontoGen" 
+            "cirugia"
+            "phCirugia"
+            "medicinaEst" 
+            "phMedicinaEst"
+            "tecnologia"
+            "phTecnologia";
+    }
+    /* laboratorio */
+    .mockup-grid {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "text-mockup text-mockup"
+            "ph1mock ph2mock"
+            "ph1mock ph2mock";
+    }
+    .ceramica-grid {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "text-ceramica text-ceramica"
+            "ph1ceram ph2ceram"
+            "ph1ceram ph3ceram";
+        grid-area: ceramica-grid;
+    }
+    .sinMetales-grid {  
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "text-sinMetales text-sinMetales"
+            "ph1sinMet ph2sinMet";
+        grid-area: sinMetales-grid;
+        animation: fadeInRight;
+        animation-duration: 4s;
+    }
+    .digitalSmail-grid {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "text-digitalSmile text-digitalSmile"
+            "ph1digital ph3digital"
+            "ph2digital ph3digital";
+        grid-area: digitalSmail-grid;
+        animation: fadeInLeft;
+        animation-duration: 5s;
+    }
+    .fotografia-grid {  
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            "text-fotografia text-fotografia"
+            "ph2foto ph4foto"
+            "ph2foto ph4foto"
+            "ph3foto ph4foto"
+            "ph3foto ph4foto";
+        grid-area: fotografia-grid;
+        animation: fadeInLeft;
+        animation-duration: 7s;
+    }
+    /* contacto */
+    .backHeaderContacto{
+        height: 10%;
+    }
+    .formContacto{
+            width: 100%;
+    }
+    .mapa{
+        width: 80%;
+    }
+    .logoPie{
+        width: 80%;
+    }
+    .backHeaderTrabajos{
+        position: relative;
+    }
+    /* trabajos */
+    .card-img{
+        height: 300px;
+    }
+
+}
+@media (max-width: 576px) { 
+    .divLogoEnc{
+        display: none;
+    }
+    /* index */
+    .backHeaderIndex{
+        height: 60vh;
+        background-image: url(img/bannerindex.JPG);
+        background-size: cover;
+        background-position: center;
+    }
+    .sectionNosotros{
+        padding: 5px;
+        background:url(img/Nosotros2.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+    }
+    .boxNosotros{
+        position: relative;
+        height: 90%;
+        padding: 20px;
+        background: rgba(255, 253, 247, 0.436);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp;
+        animation-duration: 2s;
+        overflow: hidden;
+    }
+    /* servicios */
+    .backHeaderServicios{
+        height: 60vh;
+        background-image: url(img/bannerServicios.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    .grid-mainServicios { 
+        background-color: rgba(135, 135, 135, 0.849); 
+        margin: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0;
+        grid-auto-flow: row;
+        align-items: center;
+        grid-template-areas:
+            "odontoEst"
+            "phOdontoEst" 
+            "diagnostico"
+            "phDiagnostico"
+            "odontoGen" 
+            "phOdontoGen" 
+            "cirugia"
+            "phCirugia"
+            "medicinaEst" 
+            "phMedicinaEst"
+            "tecnologia"
+            "phTecnologia";
+    }
+        /* laboratorio */
+        .mockup-grid {  
+            height: 400px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "text-mockup"
+                "ph2mock";
+        }
+        .ceramica-grid {  
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "text-ceramica"
+                "ph1ceram"
+                "ph1ceram"
+                "ph1ceram";
+        }
+        .sinMetales-grid {  
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "text-sinMetales"
+                "ph1sinMet";
+        }
+        .digitalSmail-grid {  
+            height: 650px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "text-digitalSmile"
+                "ph3digital";
+        }
+        .fotografia-grid { 
+            height: 400px; 
+            grid-template-columns:1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "text-fotografia"
+                "ph3foto"
+                "ph3foto";
+        }
+        /* contacto */
+        .backHeaderContacto{
+            height: 10%;
+        }
+        .formContacto{
+            width: 100%;
+        }
+        .mapa{
+            width: 80%;
+        }
+        .logoPie{
+            width: 80%;
+        }
+        .backHeaderTrabajos{
+            position: relative;
+        }
+            /* trabajos */
+        .card-img{
+            height: 220px;
+        }
+}
+@media (min-width: 992px) { }
+@media (min-width: 1200px) { }
+
+/* No CSS *//*# sourceMappingURL=estilos.css.map */
